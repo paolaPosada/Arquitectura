@@ -11,17 +11,17 @@ public class ViewOpe {
         Sumando b = new Sumando();
         b.setB(n2);
         int sumatoria = new MotorCalculo().suma(a, b);
+        MotorCalculo total = new MotorCalculo();
+        total.mostrarSuma(sumatoria);
+
 
         Resta min = new Resta();
         min.setMin(n1);
         Resta sust = new Resta();
         sust.setSust(n2);
-        MotorCalculo restar = new MotorCalculo();
-        restar.resta(min, sust);
+        int restar = new MotorCalculo().resta(min, sust);
+        total.mostrarResta(restar);
 
-        restar.mostrarResta();
-        System.out.println(sumatoria);
-        System.out.println(restar);
         return null;
     }
 
